@@ -211,6 +211,8 @@ namespace osu.Game.Screens.Menu
                 lineBottomLeft.MoveTo(new Vector2(-line_end_offset, line_end_offset), line_duration, Easing.OutQuint);
                 lineBottomRight.MoveTo(new Vector2(line_end_offset, line_end_offset), line_duration, Easing.OutQuint);
 
+                smallRing.FadeOut(50, Easing.Out);
+
                 using (BeginDelayedSequence(length * 0.56, true))
                 {
                     bigRing.ResizeTo(logo_size, 500, Easing.InOutQuint);
