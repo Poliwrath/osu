@@ -204,14 +204,12 @@ namespace osu.Game.Screens.Menu
 
                 const int line_end_offset = 120;
 
-                smallRing.Foreground.ResizeTo(1, line_duration, Easing.OutQuint);
+                smallRing.ResizeTo(1, line_duration, Easing.OutQuint);
 
                 lineTopLeft.MoveTo(new Vector2(-line_end_offset, -line_end_offset), line_duration, Easing.OutQuint);
                 lineTopRight.MoveTo(new Vector2(line_end_offset, -line_end_offset), line_duration, Easing.OutQuint);
                 lineBottomLeft.MoveTo(new Vector2(-line_end_offset, line_end_offset), line_duration, Easing.OutQuint);
                 lineBottomRight.MoveTo(new Vector2(line_end_offset, line_end_offset), line_duration, Easing.OutQuint);
-
-                smallRing.FadeOut(50, Easing.Out);
 
                 using (BeginDelayedSequence(length * 0.56, true))
                 {
